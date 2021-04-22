@@ -31,9 +31,9 @@ After creating a project, you need to deploy your WordPress application.
 
 First, you need to create the back-end database instance, which is in our case MariaDB. From the CMD/terminal, run the following command:
 
-''
+```
 oc new-app mariadb-persistent -e MYSQL_USER=redhat -e MYSQL_PASSWORD=openshift -e MYSQL_DATABASE=wordpress
-''
+```
 
 Note: MariaDB persistent is used so that any data stored is not lost when pods are destroyed.
 
@@ -43,7 +43,9 @@ Because you are going to deploy WordPress, build your project on Apache with a P
 
 From the CMD/terminal run the following command:
 
+```
 oc new-app php~https://github.com/iraftoul/wordpress
+```
 
 You can track the deployment by viewing its logs:
 
