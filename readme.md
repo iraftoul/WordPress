@@ -23,7 +23,7 @@ Step 3: Create a project
 Create a project to host your deployments and resources.
 From CMD/terminal, run the following command:
 
-oc new-project wordpress
+oc new-project intranet
 
 Step 4: Deploy your database and your WordPress app on OpenShift
 
@@ -31,7 +31,9 @@ After creating a project, you need to deploy your WordPress application.
 
 First, you need to create the back-end database instance, which is in our case MariaDB. From the CMD/terminal, run the following command:
 
-oc new-app mariadb-persistent
+```
+oc new-app mariadb-persistent -e MYSQL_USER=redhat -e MYSQL_PASSWORD=openshift -e MYSQL_DATABASE=wordpress
+```
 
 Note: MariaDB persistent is used so that any data stored is not lost when pods are destroyed.
 
@@ -41,7 +43,9 @@ Because you are going to deploy WordPress, build your project on Apache with a P
 
 From the CMD/terminal run the following command:
 
+```
 oc new-app php~https://github.com/iraftoul/wordpress
+```
 
 You can track the deployment by viewing its logs:
 
@@ -49,11 +53,15 @@ oc logs -f dc/wordpress
 
 After you successfully deployed WordPress, you need to access it. You expose it as a service using the following command:
 
+```
 oc expose svc/wordpress
+```
 
 Next, query the service route for the host URL that is generated. Run the following command:
 
+```
 oc get routes
+```
 
 Copy the generated host name from your terminal and paste it in any browser. You should see the welcome screen of the deployed WordPress application.
 
