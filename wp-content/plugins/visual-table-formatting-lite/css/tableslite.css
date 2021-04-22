@@ -1,0 +1,267 @@
+div.selectedouter
+{
+	background-image: url(../images/checked.png);
+	background-repeat: no-repeat;
+	background-position: center bottom;
+}
+
+
+
+div.normal
+{
+	padding-bottom:15px;
+	float:left;
+}
+
+div.normalinner
+{
+	padding:4px;
+	margin-bottom:4px;
+}
+
+div.normalinner:hover
+{
+	border-bottom:2px black solid;
+	padding-bottom:2px;
+}
+
+div.selectedinner
+{
+ 	border-bottom:2px black solid;
+	padding-bottom:2px;
+}
+
+/* altertnate rows */
+
+
+
+.handsontable td.table9td{
+	border-bottom:1px solid #b5b189;
+	border-top:1px solid #b5b189;
+}
+
+div#w3exvtf-topparent{
+ 	font-family: Verdana,Arial,sans-serif;
+	font-size: 12px;
+	background-color:white;
+}
+	
+div#w3exvtf-parent{
+	position: relative;
+	min-height:200px;
+}
+
+div.btncolrow {
+	background-color: #BBB;
+	border-radius: 7px;
+	padding:2px 6px 2px 6px;
+	color: #FFF;
+	cursor: pointer;
+	font-size: 14px;
+	font-weight: bold;
+	margin: 0 auto;
+	width: 10px;
+	height:18px;
+}
+
+div.btncolrow:hover {
+  	background-color: #777;
+}
+
+div#w3exvtf-toolbar {
+	padding:12px;
+	margin-left: 8px;
+	margin-bottom:12px;
+	background: #FCFAF2;
+	border: solid #FCEFA1 1px;
+	margin-right:8px;
+}
+
+div#w3exvtf-toolbar button{
+	margin-top:2px;
+}
+
+#w3exvtf-dialogstyles {
+    display: none;
+	font-size: 12px;
+	padding:3px;
+	margin-top:20px;
+}
+
+.handsontable td.medium{
+	height: 28px;
+	width: 45px;
+}
+
+.handsontable td.big{
+  height: 31px;
+	width: 48px;
+}
+.handsontable td.biggest{
+    height: 33px;
+	width: 51px;
+}
+.handsontable textarea
+{
+	border-color:#5292F7;
+}
+div#w3exvtf-advanced{
+	font-size:12px;
+	width:720px;
+	margin-left:auto;
+	margin-right:auto;
+}
+div#w3exvtf-advanced .ui-widget-content{
+	color:#003399;
+}
+div#w3exvtf-advanced input[type=text]{
+	width:35px;
+}
+div#w3exvtf-advanced  table{
+	 border-collapse: collapse;
+}
+div#w3exvtf-advanced table td{
+	border-bottom: 1px solid #CCCCCC;
+	padding:10px;
+}
+
+.custstyle-table {
+	border-collapse: collapse;
+	margin-left:5px;
+}
+.custstyle-table td{
+	border: 1px solid #CCCCCC;
+	padding:6px;
+	line-height: 10px;
+	vertical-align: middle;
+}
+
+.custstyle-table-rowb {
+	border-collapse: collapse;
+}
+.custstyle-table-rowb td{
+	border:none;
+	border-bottom: 1px solid #CCCCCC;
+	border-top: 1px solid #CCCCCC;
+	padding:5px;
+	line-height: 10px;
+	width:15px;
+	vertical-align: middle;
+}
+
+.custstyle-table-rowc {
+	border-collapse: collapse;
+}
+.custstyle-table-rowc td{
+	border: 1px solid #CCCCCC;
+	padding:5px;
+	line-height: 10px;
+	width:15px;
+	vertical-align: middle;
+}
+
+.tablelayout td{
+	border:none;
+	padding:3px;
+}
+.unselectable
+{
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;		
+}
+
+.centered{
+	margin-left:auto;
+	margin-right:auto;
+}
+.tablelinks{
+    color: #1B8BE0;
+    text-decoration: none;
+}
+.tablelinks:hover, .tablelinks:hover,.tablelinks:active{
+    text-decoration: underline;
+}
+
+div#w3exvtf-colsm{
+	position:absolute;
+	left:120px;
+	top:0px;
+}
+div#w3exvtf-colsp{
+	position:absolute;
+	left:150px;
+	top:0px;
+}
+
+div#w3exvtf-showlink{
+	position:absolute;
+	left:190px;
+	top:0px;
+}
+
+div#w3exvtf-rowsm{
+	margin-top:10px;
+	margin-left:7px;
+}
+div#w3exvtf-rowsp{
+	margin-top:10px;
+	margin-left:7px;
+}
+div#w3exvtf-thetable{
+	margin-left: 70px;
+	overflow: visible;
+}
+div#w3exvtf-colbtns{
+	padding-left:75px;
+	padding-top: 3px;
+	padding-bottom:20px;
+	position:relative;
+}
+div#w3exvtf-rowbtns{ 
+	position:absolute;
+	padding:12px;
+	padding-top:0px;
+	width:50px;
+}
+span#w3exvtf-applyspan{
+	margin-left:8px;
+}
+
+div#w3exvtf-note{
+	color:#655;
+	font-size:11px;
+	padding-left:18px;
+	padding-bottom:10px;
+}
+select#w3exvtf-text{
+	font-size:13px;
+  	height:24px;
+}
+select#w3exvtf-move{
+	font-size:13px;
+  	height:24px;
+}
+.w3exvtfscope td img 
+{
+	vertical-align:top;
+	border: 0 none;
+}
+.w3exvtfscope .ui-menu { position: absolute; width: 100px; }
+
+
+.w3exvtfscope .ui-widget {
+    font-size: 12px;
+}
+.w3exvtfscope .ui-dialog {font-size: 14px;}
+
+.w3exvtfscope .ui-button-text-only .ui-button-text {
+    padding: 0.2em 0.7em;
+}
+.w3exvtfscope .ui-button-icon-only
+{
+	padding: 0.4em 0;
+}

@@ -1,0 +1,12 @@
+10up/**
+antecedent/**
+apache/**
+composer/**
+hamcrest/**
+mockery/**
+twig/**
+autoload.php
+defuse/**
+paragonie/**
+monolog/**
+psr/**

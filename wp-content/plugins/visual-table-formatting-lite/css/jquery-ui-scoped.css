@@ -1,0 +1,384 @@
+/*! jQuery UI - v1.9.2 - 2013-12-19
+* http://jqueryui.com
+* Includes: jquery.ui.core.css, jquery.ui.resizable.css, jquery.ui.selectable.css, jquery.ui.accordion.css, jquery.ui.button.css, jquery.ui.dialog.css, jquery.ui.menu.css, jquery.ui.tabs.css, jquery.ui.tooltip.css, jquery.ui.theme.css
+* To view and modify this theme, visit http://jqueryui.com/themeroller/?ffDefault=Verdana%2CArial%2Csans-serif&fwDefault=normal&fsDefault=1.1em&cornerRadius=4px&bgColorHeader=%23cccccc&bgTextureHeader=highlight_soft&bgImgOpacityHeader=75&borderColorHeader=%23aaaaaa&fcHeader=%23222222&iconColorHeader=%23222222&bgColorContent=%23ffffff&bgTextureContent=flat&bgImgOpacityContent=75&borderColorContent=%23aaaaaa&fcContent=%23222222&iconColorContent=%23222222&bgColorDefault=%23dadada&bgTextureDefault=glass&bgImgOpacityDefault=75&borderColorDefault=%23999999&fcDefault=%23212121&iconColorDefault=%23454545&bgColorHover=%23dadada&bgTextureHover=glass&bgImgOpacityHover=75&borderColorHover=%23999999&fcHover=%23212121&iconColorHover=%23454545&bgColorActive=%23ffffff&bgTextureActive=glass&bgImgOpacityActive=65&borderColorActive=%23aaaaaa&fcActive=%23212121&iconColorActive=%23454545&bgColorHighlight=%23fbf9ee&bgTextureHighlight=glass&bgImgOpacityHighlight=55&borderColorHighlight=%23fcefa1&fcHighlight=%23363636&iconColorHighlight=%232e83ff&bgColorError=%23fef1ec&bgTextureError=glass&bgImgOpacityError=95&borderColorError=%23cd0a0a&fcError=%23cd0a0a&iconColorError=%23cd0a0a&bgColorOverlay=%23aaaaaa&bgTextureOverlay=flat&bgImgOpacityOverlay=0&opacityOverlay=30&bgColorShadow=%23aaaaaa&bgTextureShadow=flat&bgImgOpacityShadow=0&opacityShadow=30&thicknessShadow=8px&offsetTopShadow=-8px&offsetLeftShadow=-8px&cornerRadiusShadow=8px
+* Copyright 2013 jQuery Foundation and other contributors; Licensed MIT */
+
+/* Layout helpers
+----------------------------------*/
+.w3exvtfscope .ui-helper-hidden { display: none; }
+.w3exvtfscope .ui-helper-hidden-accessible { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
+.w3exvtfscope .ui-helper-reset { margin: 0; padding: 0; border: 0; outline: 0; line-height: 1.3; text-decoration: none; font-size: 100%; list-style: none; }
+.w3exvtfscope .ui-helper-clearfix:before, .w3exvtfscope .ui-helper-clearfix:after { content: ""; display: table; }
+.w3exvtfscope .ui-helper-clearfix:after { clear: both; }
+.w3exvtfscope .ui-helper-clearfix { zoom: 1; }
+.w3exvtfscope .ui-helper-zfix { width: 100%; height: 100%; top: 0; left: 0; position: absolute; opacity: 0; filter:Alpha(Opacity=0); }
+
+
+/* Interaction Cues
+----------------------------------*/
+.w3exvtfscope .ui-state-disabled { cursor: default !important; }
+
+
+/* Icons
+----------------------------------*/
+
+/* states and images */
+.w3exvtfscope .ui-icon { display: block; text-indent: -99999px; overflow: hidden; background-repeat: no-repeat; }
+
+
+/* Misc visuals
+----------------------------------*/
+
+/* Overlays */
+.w3exvtfscope .ui-widget-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+.w3exvtfscope .ui-resizable { position: relative;}
+.w3exvtfscope .ui-resizable-handle { position: absolute;font-size: 0.1px; display: block; }
+.w3exvtfscope .ui-resizable-disabled .ui-resizable-handle, .w3exvtfscope .ui-resizable-autohide .ui-resizable-handle { display: none; }
+.w3exvtfscope .ui-resizable-n { cursor: n-resize; height: 7px; width: 100%; top: -5px; left: 0; }
+.w3exvtfscope .ui-resizable-s { cursor: s-resize; height: 7px; width: 100%; bottom: -5px; left: 0; }
+.w3exvtfscope .ui-resizable-e { cursor: e-resize; width: 7px; right: -5px; top: 0; height: 100%; }
+.w3exvtfscope .ui-resizable-w { cursor: w-resize; width: 7px; left: -5px; top: 0; height: 100%; }
+.w3exvtfscope .ui-resizable-se { cursor: se-resize; width: 12px; height: 12px; right: 1px; bottom: 1px; }
+.w3exvtfscope .ui-resizable-sw { cursor: sw-resize; width: 9px; height: 9px; left: -5px; bottom: -5px; }
+.w3exvtfscope .ui-resizable-nw { cursor: nw-resize; width: 9px; height: 9px; left: -5px; top: -5px; }
+.w3exvtfscope .ui-resizable-ne { cursor: ne-resize; width: 9px; height: 9px; right: -5px; top: -5px;}.w3exvtfscope .ui-selectable-helper { position: absolute; z-index: 100; border:1px dotted black; }
+.w3exvtfscope .ui-accordion .ui-accordion-header { display: block; cursor: pointer; position: relative; margin-top: 2px; padding: .5em .5em .5em .7em; zoom: 1; }
+.w3exvtfscope .ui-accordion .ui-accordion-icons { padding-left: 2.2em; }
+.w3exvtfscope .ui-accordion .ui-accordion-noicons { padding-left: .7em; }
+.w3exvtfscope .ui-accordion .ui-accordion-icons .ui-accordion-icons { padding-left: 2.2em; }
+.w3exvtfscope .ui-accordion .ui-accordion-header .ui-accordion-header-icon { position: absolute; left: .5em; top: 50%; margin-top: -8px; }
+.w3exvtfscope .ui-accordion .ui-accordion-content { padding: 1em 2.2em; border-top: 0; overflow: auto; zoom: 1; }
+.w3exvtfscope .ui-button { display: inline-block; position: relative; padding: 0; margin-right: .1em; cursor: pointer; text-align: center; zoom: 1; overflow: visible; 
+height:auto;
+box-shadow:none;
+vertical-align: middle;
+} /* the overflow property removes extra width in IE */
+.w3exvtfscope .ui-button, .w3exvtfscope .ui-button:link, .w3exvtfscope .ui-button:visited, .w3exvtfscope .ui-button:hover, .w3exvtfscope .ui-button:active { text-decoration: none; }
+.w3exvtfscope .ui-button-icon-only { width: 2.2em; } /* to make room for the icon, a width needs to be set here */
+button.w3exvtfscope .ui-button-icon-only { width: 2.4em; } /* button elements seem to need a little more width */
+.w3exvtfscope .ui-button-icons-only { width: 3.4em; } 
+button.w3exvtfscope .ui-button-icons-only { width: 3.7em; } 
+
+/*button text element */
+.w3exvtfscope .ui-button .ui-button-text { display: block; line-height: 1.4;  }
+.w3exvtfscope .ui-button-text-only .ui-button-text { padding: .4em 1em; }
+.w3exvtfscope .ui-button-icon-only .ui-button-text, .w3exvtfscope .ui-button-icons-only .ui-button-text { padding: .4em; text-indent: -9999999px; }
+.w3exvtfscope .ui-button-text-icon-primary .ui-button-text, .w3exvtfscope .ui-button-text-icons .ui-button-text { padding: .4em 1em .4em 2.1em; }
+.w3exvtfscope .ui-button-text-icon-secondary .ui-button-text, .w3exvtfscope .ui-button-text-icons .ui-button-text { padding: .4em 2.1em .4em 1em; }
+.w3exvtfscope .ui-button-text-icons .ui-button-text { padding-left: 2.1em; padding-right: 2.1em; }
+/* no icon support for input elements, provide padding by default */
+input.w3exvtfscope .ui-button { padding: .4em 1em; }
+
+/*button icon element(s) */
+.w3exvtfscope .ui-button-icon-only .ui-icon, .w3exvtfscope .ui-button-text-icon-primary .ui-icon, .w3exvtfscope .ui-button-text-icon-secondary .ui-icon, .w3exvtfscope .ui-button-text-icons .ui-icon, .w3exvtfscope .ui-button-icons-only .ui-icon { position: absolute; top: 50%; margin-top: -8px; }
+.w3exvtfscope .ui-button-icon-only .ui-icon { left: 50%; margin-left: -8px; }
+.w3exvtfscope .ui-button-text-icon-primary .ui-button-icon-primary, .w3exvtfscope .ui-button-text-icons .ui-button-icon-primary, .w3exvtfscope .ui-button-icons-only .ui-button-icon-primary { left: .5em; }
+.w3exvtfscope .ui-button-text-icon-secondary .ui-button-icon-secondary, .w3exvtfscope .ui-button-text-icons .ui-button-icon-secondary, .w3exvtfscope .ui-button-icons-only .ui-button-icon-secondary { right: .5em; }
+.w3exvtfscope .ui-button-text-icons .ui-button-icon-secondary, .w3exvtfscope .ui-button-icons-only .ui-button-icon-secondary { right: .5em; }
+
+/*button sets*/
+.w3exvtfscope .ui-buttonset { margin-right: 7px; }
+.w3exvtfscope .ui-buttonset .ui-button { margin-left: 0; margin-right: -.3em; }
+.w3exvtfscope .ui-dialog-titlebar-close:before {
+    font: inherit;
+vertical-align: top;
+width: 36px;
+height: 36px;
+content: inherit;	
+  	
+}
+/* workarounds */
+button.w3exvtfscope .ui-button::-moz-focus-inner { border: 0; padding: 0; } /* reset extra padding in Firefox */
+.w3exvtfscope .ui-dialog { position: absolute; top: 0; left: 0; padding: .2em; width: 300px; overflow: hidden; }
+.w3exvtfscope .ui-dialog .ui-dialog-titlebar { padding: .4em 1em; position: relative;
+	height: auto;
+	font-size: inherit;
+	line-height: inherit;
+  }
+.w3exvtfscope .ui-dialog .ui-dialog-title { float: left; margin: .1em 16px .1em 0; }
+.w3exvtfscope .ui-dialog .ui-dialog-titlebar-close { position: absolute; right: .3em; top: 50%; width: 19px; margin: -10px 0 0 0; padding: 1px; height: 18px; }
+.w3exvtfscope .ui-dialog .ui-dialog-titlebar-close span { display: block; margin: 1px; }
+.w3exvtfscope .ui-dialog .ui-dialog-titlebar-close:hover, .w3exvtfscope .ui-dialog .ui-dialog-titlebar-close:focus { padding: 0; }
+.w3exvtfscope .ui-dialog .ui-dialog-content { position: relative; border: 0; padding: .5em 1em; background: none; overflow: auto; zoom: 1; }
+.w3exvtfscope .ui-dialog .ui-dialog-buttonpane { text-align: left; border-width: 1px 0 0 0; background-image: none; margin: .5em 0 0 0; padding: .3em 1em .5em .4em; }
+.w3exvtfscope .ui-dialog .ui-dialog-buttonpane .ui-dialog-buttonset { float: right; }
+.w3exvtfscope .ui-dialog .ui-dialog-buttonpane button { margin: .5em .4em .5em 0; cursor: pointer; }
+.w3exvtfscope .ui-dialog .ui-resizable-se { width: 14px; height: 14px; right: 3px; bottom: 3px; }
+.w3exvtfscope .ui-draggable .ui-dialog-titlebar { cursor: move; }
+.w3exvtfscope .ui-menu { list-style:none; padding: 2px; margin: 0; display:block; outline: none; }
+.w3exvtfscope .ui-menu .ui-menu { margin-top: -3px; position: absolute; }
+.w3exvtfscope .ui-menu .ui-menu-item { margin: 0; padding: 0; zoom: 1; width: 100%; }
+.w3exvtfscope .ui-menu .ui-menu-divider { margin: 5px -2px 5px -2px; height: 0; font-size: 0; line-height: 0; border-width: 1px 0 0 0; }
+.w3exvtfscope .ui-menu .ui-menu-item a { text-decoration: none; display: block; padding: 2px .4em; line-height: 1.5; zoom: 1; font-weight: normal; }
+.w3exvtfscope .ui-menu .ui-menu-item a.ui-state-focus,
+.w3exvtfscope .ui-menu .ui-menu-item a.ui-state-active { font-weight: normal; margin: -1px; }
+
+.w3exvtfscope .ui-menu .ui-state-disabled { font-weight: normal; margin: .4em 0 .2em; line-height: 1.5; }
+.w3exvtfscope .ui-menu .ui-state-disabled a { cursor: default; }
+
+/* icon support */
+.w3exvtfscope .ui-menu-icons { position: relative; }
+.w3exvtfscope .ui-menu-icons .ui-menu-item a { position: relative; padding-left: 2em; }
+
+/* left-aligned */
+.w3exvtfscope .ui-menu .ui-icon { position: absolute; top: .2em; left: .2em; }
+
+/* right-aligned */
+.w3exvtfscope .ui-menu .ui-menu-icon { position: static; float: right; }
+.w3exvtfscope .ui-tabs { position: relative; padding: .2em; zoom: 1; } /* position: relative prevents IE scroll bug (element with position: relative inside container with overflow: auto appear as "fixed") */
+.w3exvtfscope .ui-tabs .ui-tabs-nav { margin: 0; padding: .2em .2em 0; }
+.w3exvtfscope .ui-tabs .ui-tabs-nav li { list-style: none; float: left; position: relative; top: 0; margin: 1px .2em 0 0; border-bottom: 0; padding: 0; white-space: nowrap; }
+.w3exvtfscope .ui-tabs .ui-tabs-nav li a { float: left; padding: .5em 1em; text-decoration: none; }
+.w3exvtfscope .ui-tabs .ui-tabs-nav li.ui-tabs-active { margin-bottom: -1px; padding-bottom: 1px; }
+.w3exvtfscope .ui-tabs .ui-tabs-nav li.ui-tabs-active a, .w3exvtfscope .ui-tabs .ui-tabs-nav li.ui-state-disabled a, .w3exvtfscope .ui-tabs .ui-tabs-nav li.ui-tabs-loading a { cursor: text; }
+.w3exvtfscope .ui-tabs .ui-tabs-nav li a, .w3exvtfscope .ui-tabs-collapsible .ui-tabs-nav li.ui-tabs-active a { cursor: pointer; } /* first selector in group seems obsolete, but required to overcome bug in Opera applying cursor: text overall if defined elsewhere... */
+.w3exvtfscope .ui-tabs .ui-tabs-panel { display: block; border-width: 0; padding: 1em 1.4em; background: none; }
+.w3exvtfscope .ui-tooltip {
+	padding: 8px;
+	position: absolute;
+	z-index: 9999;
+	max-width: 300px;
+	-webkit-box-shadow: 0 0 5px #aaa;
+	box-shadow: 0 0 5px #aaa;
+}
+/* Fades and background-images don't work well together in IE6, drop the image */
+* html .w3exvtfscope .ui-tooltip {
+	background-image: none;
+}
+body .w3exvtfscope .ui-tooltip { border-width: 2px; }
+
+/* Component containers
+----------------------------------*/
+.w3exvtfscope .ui-widget { font-family: Verdana,Arial,sans-serif; font-size: 1.1em; }
+.w3exvtfscope .ui-widget .ui-widget { font-size: 1em; }
+.w3exvtfscope .ui-widget input, .w3exvtfscope .ui-widget select, .w3exvtfscope .ui-widget textarea, .w3exvtfscope .ui-widget button { font-family: Verdana,Arial,sans-serif; font-size: 1em; }
+.w3exvtfscope .ui-widget-content { border: 1px solid #aaaaaa; background: #ffffff url(images/ui-bg_flat_75_ffffff_40x100.png) 50% 50% repeat-x; color: #222222; }
+.w3exvtfscope .ui-widget-content a { color: #222222; }
+.w3exvtfscope .ui-widget-header { border: 1px solid #aaaaaa; background: #cccccc url(images/ui-bg_highlight-soft_75_cccccc_1x100.png) 50% 50% repeat-x; color: #222222; font-weight: bold; }
+.w3exvtfscope .ui-widget-header a { color: #222222; }
+
+/* Interaction states
+----------------------------------*/
+.w3exvtfscope .ui-state-default, .w3exvtfscope .ui-widget-content .ui-state-default, .w3exvtfscope .ui-widget-header .ui-state-default { border: 1px solid #999999; background: #dadada url(images/ui-bg_glass_75_dadada_1x400.png) 50% 50% repeat-x; font-weight: normal; color: #212121; }
+.w3exvtfscope .ui-state-default a, .w3exvtfscope .ui-state-default a:link, .w3exvtfscope .ui-state-default a:visited { color: #212121; text-decoration: none; }
+.w3exvtfscope .ui-state-hover, .w3exvtfscope .ui-widget-content .ui-state-hover, .w3exvtfscope .ui-widget-header .ui-state-hover, .w3exvtfscope .ui-state-focus, .w3exvtfscope .ui-widget-content .ui-state-focus, .w3exvtfscope .ui-widget-header .ui-state-focus { border: 1px solid #999999; background: #dadada url(images/ui-bg_glass_75_dadada_1x400.png) 50% 50% repeat-x; font-weight: normal; color: #212121; }
+.w3exvtfscope .ui-state-hover a, .w3exvtfscope .ui-state-hover a:hover, .w3exvtfscope .ui-state-hover a:link, .w3exvtfscope .ui-state-hover a:visited { color: #212121; text-decoration: none; }
+.w3exvtfscope .ui-state-active, .w3exvtfscope .ui-widget-content .ui-state-active, .w3exvtfscope .ui-widget-header .ui-state-active { border: 1px solid #aaaaaa; background: #ffffff url(images/ui-bg_glass_65_ffffff_1x400.png) 50% 50% repeat-x; font-weight: normal; color: #212121; }
+.w3exvtfscope .ui-state-active a, .w3exvtfscope .ui-state-active a:link, .w3exvtfscope .ui-state-active a:visited { color: #212121; text-decoration: none; }
+
+/* Interaction Cues
+----------------------------------*/
+.w3exvtfscope .ui-state-highlight, .w3exvtfscope .ui-widget-content .ui-state-highlight, .w3exvtfscope .ui-widget-header .ui-state-highlight  {border: 1px solid #fcefa1; background: #fbf9ee url(images/ui-bg_glass_55_fbf9ee_1x400.png) 50% 50% repeat-x; color: #363636; }
+.w3exvtfscope .ui-state-highlight a, .w3exvtfscope .ui-widget-content .ui-state-highlight a,.w3exvtfscope .ui-widget-header .ui-state-highlight a { color: #363636; }
+.w3exvtfscope .ui-state-error, .w3exvtfscope .ui-widget-content .ui-state-error, .w3exvtfscope .ui-widget-header .ui-state-error {border: 1px solid #cd0a0a; background: #fef1ec url(images/ui-bg_glass_95_fef1ec_1x400.png) 50% 50% repeat-x; color: #cd0a0a; }
+.w3exvtfscope .ui-state-error a, .w3exvtfscope .ui-widget-content .ui-state-error a, .w3exvtfscope .ui-widget-header .ui-state-error a { color: #cd0a0a; }
+.w3exvtfscope .ui-state-error-text, .w3exvtfscope .ui-widget-content .ui-state-error-text, .w3exvtfscope .ui-widget-header .ui-state-error-text { color: #cd0a0a; }
+.w3exvtfscope .ui-priority-primary, .w3exvtfscope .ui-widget-content .ui-priority-primary, .w3exvtfscope .ui-widget-header .ui-priority-primary { font-weight: bold; }
+.w3exvtfscope .ui-priority-secondary, .w3exvtfscope .ui-widget-content .ui-priority-secondary,  .w3exvtfscope .ui-widget-header .ui-priority-secondary { opacity: .7; filter:Alpha(Opacity=70); font-weight: normal; }
+.w3exvtfscope .ui-state-disabled, .w3exvtfscope .ui-widget-content .ui-state-disabled, .w3exvtfscope .ui-widget-header .ui-state-disabled { opacity: .35; filter:Alpha(Opacity=35); background-image: none; }
+.w3exvtfscope .ui-state-disabled .ui-icon { filter:Alpha(Opacity=35); } /* For IE8 - See #6059 */
+
+/* Icons
+----------------------------------*/
+
+/* states and images */
+.w3exvtfscope .ui-icon { width: 16px; height: 16px; background-image: url(images/ui-icons_222222_256x240.png); }
+.w3exvtfscope .ui-widget-content .ui-icon {background-image: url(images/ui-icons_222222_256x240.png); }
+.w3exvtfscope .ui-widget-header .ui-icon {background-image: url(images/ui-icons_222222_256x240.png); }
+.w3exvtfscope .ui-state-default .ui-icon { background-image: url(images/ui-icons_454545_256x240.png); }
+.w3exvtfscope .ui-state-hover .ui-icon, .w3exvtfscope .ui-state-focus .ui-icon {background-image: url(images/ui-icons_454545_256x240.png); }
+.w3exvtfscope .ui-state-active .ui-icon {background-image: url(images/ui-icons_454545_256x240.png); }
+.w3exvtfscope .ui-state-highlight .ui-icon {background-image: url(images/ui-icons_2e83ff_256x240.png); }
+.w3exvtfscope .ui-state-error .ui-icon, .w3exvtfscope .ui-state-error-text .ui-icon {background-image: url(images/ui-icons_cd0a0a_256x240.png); }
+
+/* positioning */
+.w3exvtfscope .ui-icon-carat-1-n { background-position: 0 0; }
+.w3exvtfscope .ui-icon-carat-1-ne { background-position: -16px 0; }
+.w3exvtfscope .ui-icon-carat-1-e { background-position: -32px 0; }
+.w3exvtfscope .ui-icon-carat-1-se { background-position: -48px 0; }
+.w3exvtfscope .ui-icon-carat-1-s { background-position: -64px 0; }
+.w3exvtfscope .ui-icon-carat-1-sw { background-position: -80px 0; }
+.w3exvtfscope .ui-icon-carat-1-w { background-position: -96px 0; }
+.w3exvtfscope .ui-icon-carat-1-nw { background-position: -112px 0; }
+.w3exvtfscope .ui-icon-carat-2-n-s { background-position: -128px 0; }
+.w3exvtfscope .ui-icon-carat-2-e-w { background-position: -144px 0; }
+.w3exvtfscope .ui-icon-triangle-1-n { background-position: 0 -16px; }
+.w3exvtfscope .ui-icon-triangle-1-ne { background-position: -16px -16px; }
+.w3exvtfscope .ui-icon-triangle-1-e { background-position: -32px -16px; }
+.w3exvtfscope .ui-icon-triangle-1-se { background-position: -48px -16px; }
+.w3exvtfscope .ui-icon-triangle-1-s { background-position: -64px -16px; }
+.w3exvtfscope .ui-icon-triangle-1-sw { background-position: -80px -16px; }
+.w3exvtfscope .ui-icon-triangle-1-w { background-position: -96px -16px; }
+.w3exvtfscope .ui-icon-triangle-1-nw { background-position: -112px -16px; }
+.w3exvtfscope .ui-icon-triangle-2-n-s { background-position: -128px -16px; }
+.w3exvtfscope .ui-icon-triangle-2-e-w { background-position: -144px -16px; }
+.w3exvtfscope .ui-icon-arrow-1-n { background-position: 0 -32px; }
+.w3exvtfscope .ui-icon-arrow-1-ne { background-position: -16px -32px; }
+.w3exvtfscope .ui-icon-arrow-1-e { background-position: -32px -32px; }
+.w3exvtfscope .ui-icon-arrow-1-se { background-position: -48px -32px; }
+.w3exvtfscope .ui-icon-arrow-1-s { background-position: -64px -32px; }
+.w3exvtfscope .ui-icon-arrow-1-sw { background-position: -80px -32px; }
+.w3exvtfscope .ui-icon-arrow-1-w { background-position: -96px -32px; }
+.w3exvtfscope .ui-icon-arrow-1-nw { background-position: -112px -32px; }
+.w3exvtfscope .ui-icon-arrow-2-n-s { background-position: -128px -32px; }
+.w3exvtfscope .ui-icon-arrow-2-ne-sw { background-position: -144px -32px; }
+.w3exvtfscope .ui-icon-arrow-2-e-w { background-position: -160px -32px; }
+.w3exvtfscope .ui-icon-arrow-2-se-nw { background-position: -176px -32px; }
+.w3exvtfscope .ui-icon-arrowstop-1-n { background-position: -192px -32px; }
+.w3exvtfscope .ui-icon-arrowstop-1-e { background-position: -208px -32px; }
+.w3exvtfscope .ui-icon-arrowstop-1-s { background-position: -224px -32px; }
+.w3exvtfscope .ui-icon-arrowstop-1-w { background-position: -240px -32px; }
+.w3exvtfscope .ui-icon-arrowthick-1-n { background-position: 0 -48px; }
+.w3exvtfscope .ui-icon-arrowthick-1-ne { background-position: -16px -48px; }
+.w3exvtfscope .ui-icon-arrowthick-1-e { background-position: -32px -48px; }
+.w3exvtfscope .ui-icon-arrowthick-1-se { background-position: -48px -48px; }
+.w3exvtfscope .ui-icon-arrowthick-1-s { background-position: -64px -48px; }
+.w3exvtfscope .ui-icon-arrowthick-1-sw { background-position: -80px -48px; }
+.w3exvtfscope .ui-icon-arrowthick-1-w { background-position: -96px -48px; }
+.w3exvtfscope .ui-icon-arrowthick-1-nw { background-position: -112px -48px; }
+.w3exvtfscope .ui-icon-arrowthick-2-n-s { background-position: -128px -48px; }
+.w3exvtfscope .ui-icon-arrowthick-2-ne-sw { background-position: -144px -48px; }
+.w3exvtfscope .ui-icon-arrowthick-2-e-w { background-position: -160px -48px; }
+.w3exvtfscope .ui-icon-arrowthick-2-se-nw { background-position: -176px -48px; }
+.w3exvtfscope .ui-icon-arrowthickstop-1-n { background-position: -192px -48px; }
+.w3exvtfscope .ui-icon-arrowthickstop-1-e { background-position: -208px -48px; }
+.w3exvtfscope .ui-icon-arrowthickstop-1-s { background-position: -224px -48px; }
+.w3exvtfscope .ui-icon-arrowthickstop-1-w { background-position: -240px -48px; }
+.w3exvtfscope .ui-icon-arrowreturnthick-1-w { background-position: 0 -64px; }
+.w3exvtfscope .ui-icon-arrowreturnthick-1-n { background-position: -16px -64px; }
+.w3exvtfscope .ui-icon-arrowreturnthick-1-e { background-position: -32px -64px; }
+.w3exvtfscope .ui-icon-arrowreturnthick-1-s { background-position: -48px -64px; }
+.w3exvtfscope .ui-icon-arrowreturn-1-w { background-position: -64px -64px; }
+.w3exvtfscope .ui-icon-arrowreturn-1-n { background-position: -80px -64px; }
+.w3exvtfscope .ui-icon-arrowreturn-1-e { background-position: -96px -64px; }
+.w3exvtfscope .ui-icon-arrowreturn-1-s { background-position: -112px -64px; }
+.w3exvtfscope .ui-icon-arrowrefresh-1-w { background-position: -128px -64px; }
+.w3exvtfscope .ui-icon-arrowrefresh-1-n { background-position: -144px -64px; }
+.w3exvtfscope .ui-icon-arrowrefresh-1-e { background-position: -160px -64px; }
+.w3exvtfscope .ui-icon-arrowrefresh-1-s { background-position: -176px -64px; }
+.w3exvtfscope .ui-icon-arrow-4 { background-position: 0 -80px; }
+.w3exvtfscope .ui-icon-arrow-4-diag { background-position: -16px -80px; }
+.w3exvtfscope .ui-icon-extlink { background-position: -32px -80px; }
+.w3exvtfscope .ui-icon-newwin { background-position: -48px -80px; }
+.w3exvtfscope .ui-icon-refresh { background-position: -64px -80px; }
+.w3exvtfscope .ui-icon-shuffle { background-position: -80px -80px; }
+.w3exvtfscope .ui-icon-transfer-e-w { background-position: -96px -80px; }
+.w3exvtfscope .ui-icon-transferthick-e-w { background-position: -112px -80px; }
+.w3exvtfscope .ui-icon-folder-collapsed { background-position: 0 -96px; }
+.w3exvtfscope .ui-icon-folder-open { background-position: -16px -96px; }
+.w3exvtfscope .ui-icon-document { background-position: -32px -96px; }
+.w3exvtfscope .ui-icon-document-b { background-position: -48px -96px; }
+.w3exvtfscope .ui-icon-note { background-position: -64px -96px; }
+.w3exvtfscope .ui-icon-mail-closed { background-position: -80px -96px; }
+.w3exvtfscope .ui-icon-mail-open { background-position: -96px -96px; }
+.w3exvtfscope .ui-icon-suitcase { background-position: -112px -96px; }
+.w3exvtfscope .ui-icon-comment { background-position: -128px -96px; }
+.w3exvtfscope .ui-icon-person { background-position: -144px -96px; }
+.w3exvtfscope .ui-icon-print { background-position: -160px -96px; }
+.w3exvtfscope .ui-icon-trash { background-position: -176px -96px; }
+.w3exvtfscope .ui-icon-locked { background-position: -192px -96px; }
+.w3exvtfscope .ui-icon-unlocked { background-position: -208px -96px; }
+.w3exvtfscope .ui-icon-bookmark { background-position: -224px -96px; }
+.w3exvtfscope .ui-icon-tag { background-position: -240px -96px; }
+.w3exvtfscope .ui-icon-home { background-position: 0 -112px; }
+.w3exvtfscope .ui-icon-flag { background-position: -16px -112px; }
+.w3exvtfscope .ui-icon-calendar { background-position: -32px -112px; }
+.w3exvtfscope .ui-icon-cart { background-position: -48px -112px; }
+.w3exvtfscope .ui-icon-pencil { background-position: -64px -112px; }
+.w3exvtfscope .ui-icon-clock { background-position: -80px -112px; }
+.w3exvtfscope .ui-icon-disk { background-position: -96px -112px; }
+.w3exvtfscope .ui-icon-calculator { background-position: -112px -112px; }
+.w3exvtfscope .ui-icon-zoomin { background-position: -128px -112px; }
+.w3exvtfscope .ui-icon-zoomout { background-position: -144px -112px; }
+.w3exvtfscope .ui-icon-search { background-position: -160px -112px; }
+.w3exvtfscope .ui-icon-wrench { background-position: -176px -112px; }
+.w3exvtfscope .ui-icon-gear { background-position: -192px -112px; }
+.w3exvtfscope .ui-icon-heart { background-position: -208px -112px; }
+.w3exvtfscope .ui-icon-star { background-position: -224px -112px; }
+.w3exvtfscope .ui-icon-link { background-position: -240px -112px; }
+.w3exvtfscope .ui-icon-cancel { background-position: 0 -128px; }
+.w3exvtfscope .ui-icon-plus { background-position: -16px -128px; }
+.w3exvtfscope .ui-icon-plusthick { background-position: -32px -128px; }
+.w3exvtfscope .ui-icon-minus { background-position: -48px -128px; }
+.w3exvtfscope .ui-icon-minusthick { background-position: -64px -128px; }
+.w3exvtfscope .ui-icon-close { background-position: -80px -128px; }
+.w3exvtfscope .ui-icon-closethick { background-position: -96px -128px; }
+.w3exvtfscope .ui-icon-key { background-position: -112px -128px; }
+.w3exvtfscope .ui-icon-lightbulb { background-position: -128px -128px; }
+.w3exvtfscope .ui-icon-scissors { background-position: -144px -128px; }
+.w3exvtfscope .ui-icon-clipboard { background-position: -160px -128px; }
+.w3exvtfscope .ui-icon-copy { background-position: -176px -128px; }
+.w3exvtfscope .ui-icon-contact { background-position: -192px -128px; }
+.w3exvtfscope .ui-icon-image { background-position: -208px -128px; }
+.w3exvtfscope .ui-icon-video { background-position: -224px -128px; }
+.w3exvtfscope .ui-icon-script { background-position: -240px -128px; }
+.w3exvtfscope .ui-icon-alert { background-position: 0 -144px; }
+.w3exvtfscope .ui-icon-info { background-position: -16px -144px; }
+.w3exvtfscope .ui-icon-notice { background-position: -32px -144px; }
+.w3exvtfscope .ui-icon-help { background-position: -48px -144px; }
+.w3exvtfscope .ui-icon-check { background-position: -64px -144px; }
+.w3exvtfscope .ui-icon-bullet { background-position: -80px -144px; }
+.w3exvtfscope .ui-icon-radio-on { background-position: -96px -144px; }
+.w3exvtfscope .ui-icon-radio-off { background-position: -112px -144px; }
+.w3exvtfscope .ui-icon-pin-w { background-position: -128px -144px; }
+.w3exvtfscope .ui-icon-pin-s { background-position: -144px -144px; }
+.w3exvtfscope .ui-icon-play { background-position: 0 -160px; }
+.w3exvtfscope .ui-icon-pause { background-position: -16px -160px; }
+.w3exvtfscope .ui-icon-seek-next { background-position: -32px -160px; }
+.w3exvtfscope .ui-icon-seek-prev { background-position: -48px -160px; }
+.w3exvtfscope .ui-icon-seek-end { background-position: -64px -160px; }
+.w3exvtfscope .ui-icon-seek-start { background-position: -80px -160px; }
+/* ui-icon-seek-first is deprecated, use ui-icon-seek-start instead */
+.w3exvtfscope .ui-icon-seek-first { background-position: -80px -160px; }
+.w3exvtfscope .ui-icon-stop { background-position: -96px -160px; }
+.w3exvtfscope .ui-icon-eject { background-position: -112px -160px; }
+.w3exvtfscope .ui-icon-volume-off { background-position: -128px -160px; }
+.w3exvtfscope .ui-icon-volume-on { background-position: -144px -160px; }
+.w3exvtfscope .ui-icon-power { background-position: 0 -176px; }
+.w3exvtfscope .ui-icon-signal-diag { background-position: -16px -176px; }
+.w3exvtfscope .ui-icon-signal { background-position: -32px -176px; }
+.w3exvtfscope .ui-icon-battery-0 { background-position: -48px -176px; }
+.w3exvtfscope .ui-icon-battery-1 { background-position: -64px -176px; }
+.w3exvtfscope .ui-icon-battery-2 { background-position: -80px -176px; }
+.w3exvtfscope .ui-icon-battery-3 { background-position: -96px -176px; }
+.w3exvtfscope .ui-icon-circle-plus { background-position: 0 -192px; }
+.w3exvtfscope .ui-icon-circle-minus { background-position: -16px -192px; }
+.w3exvtfscope .ui-icon-circle-close { background-position: -32px -192px; }
+.w3exvtfscope .ui-icon-circle-triangle-e { background-position: -48px -192px; }
+.w3exvtfscope .ui-icon-circle-triangle-s { background-position: -64px -192px; }
+.w3exvtfscope .ui-icon-circle-triangle-w { background-position: -80px -192px; }
+.w3exvtfscope .ui-icon-circle-triangle-n { background-position: -96px -192px; }
+.w3exvtfscope .ui-icon-circle-arrow-e { background-position: -112px -192px; }
+.w3exvtfscope .ui-icon-circle-arrow-s { background-position: -128px -192px; }
+.w3exvtfscope .ui-icon-circle-arrow-w { background-position: -144px -192px; }
+.w3exvtfscope .ui-icon-circle-arrow-n { background-position: -160px -192px; }
+.w3exvtfscope .ui-icon-circle-zoomin { background-position: -176px -192px; }
+.w3exvtfscope .ui-icon-circle-zoomout { background-position: -192px -192px; }
+.w3exvtfscope .ui-icon-circle-check { background-position: -208px -192px; }
+.w3exvtfscope .ui-icon-circlesmall-plus { background-position: 0 -208px; }
+.w3exvtfscope .ui-icon-circlesmall-minus { background-position: -16px -208px; }
+.w3exvtfscope .ui-icon-circlesmall-close { background-position: -32px -208px; }
+.w3exvtfscope .ui-icon-squaresmall-plus { background-position: -48px -208px; }
+.w3exvtfscope .ui-icon-squaresmall-minus { background-position: -64px -208px; }
+.w3exvtfscope .ui-icon-squaresmall-close { background-position: -80px -208px; }
+.w3exvtfscope .ui-icon-grip-dotted-vertical { background-position: 0 -224px; }
+.w3exvtfscope .ui-icon-grip-dotted-horizontal { background-position: -16px -224px; }
+.w3exvtfscope .ui-icon-grip-solid-vertical { background-position: -32px -224px; }
+.w3exvtfscope .ui-icon-grip-solid-horizontal { background-position: -48px -224px; }
+.w3exvtfscope .ui-icon-gripsmall-diagonal-se { background-position: -64px -224px; }
+.w3exvtfscope .ui-icon-grip-diagonal-se { background-position: -80px -224px; }
+
+
+/* Misc visuals
+----------------------------------*/
+
+/* Corner radius */
+.w3exvtfscope .ui-corner-all, .w3exvtfscope .ui-corner-top, .w3exvtfscope .ui-corner-left, .w3exvtfscope .ui-corner-tl { -moz-border-radius-topleft: 4px; -webkit-border-top-left-radius: 4px; -khtml-border-top-left-radius: 4px; border-top-left-radius: 4px; }
+.w3exvtfscope .ui-corner-all, .w3exvtfscope .ui-corner-top, .w3exvtfscope .ui-corner-right, .w3exvtfscope .ui-corner-tr { -moz-border-radius-topright: 4px; -webkit-border-top-right-radius: 4px; -khtml-border-top-right-radius: 4px; border-top-right-radius: 4px; }
+.w3exvtfscope .ui-corner-all, .w3exvtfscope .ui-corner-bottom, .w3exvtfscope .ui-corner-left, .w3exvtfscope .ui-corner-bl { -moz-border-radius-bottomleft: 4px; -webkit-border-bottom-left-radius: 4px; -khtml-border-bottom-left-radius: 4px; border-bottom-left-radius: 4px; }
+.w3exvtfscope .ui-corner-all, .w3exvtfscope .ui-corner-bottom, .w3exvtfscope .ui-corner-right, .w3exvtfscope .ui-corner-br { -moz-border-radius-bottomright: 4px; -webkit-border-bottom-right-radius: 4px; -khtml-border-bottom-right-radius: 4px; border-bottom-right-radius: 4px; }
+
+/* Overlays */
+.w3exvtfscope .ui-widget-overlay { background: #aaaaaa url(images/ui-bg_flat_0_aaaaaa_40x100.png) 50% 50% repeat-x; opacity: .3;filter:Alpha(Opacity=30); }
+.w3exvtfscope .ui-widget-shadow { margin: -8px 0 0 -8px; padding: 8px; background: #aaaaaa url(images/ui-bg_flat_0_aaaaaa_40x100.png) 50% 50% repeat-x; opacity: .3;filter:Alpha(Opacity=30); -moz-border-radius: 8px; -khtml-border-radius: 8px; -webkit-border-radius: 8px; border-radius: 8px; }
