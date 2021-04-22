@@ -53,11 +53,15 @@ oc logs -f dc/wordpress
 
 After you successfully deployed WordPress, you need to access it. You expose it as a service using the following command:
 
+```
 oc expose svc/wordpress
+```
 
 Next, query the service route for the host URL that is generated. Run the following command:
 
+```
 oc get routes
+```
 
 Copy the generated host name from your terminal and paste it in any browser. You should see the welcome screen of the deployed WordPress application.
 
