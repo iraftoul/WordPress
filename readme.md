@@ -52,9 +52,9 @@ Copy the generated host name from your terminal and paste it in any browser. You
 
 In the welcome screen, provide the following information to complete the wordpress initialization:
 
-****Site title, username, password and your email.****
+**_Site title, username, password and your email._**
 
-After successfully setting up WordPress, the login screen opens. Use the username and password you provided to log in. Hopefully everything is now set up and you can start editing on Wordpress.
+After setting up WordPress, the login screen opens. Use the username and password you provided to log in. Everything should be now set up and you can start editing on Wordpress.
 
 For more context and input on the topic feel free to go through this recent post by IBM:
 
