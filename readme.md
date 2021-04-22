@@ -18,7 +18,7 @@ oc new-project intranet
 
 ### Step 3: Deploy a persistent mariadb database
 
-Now you need to create the back-end database instance, which is in our case MariaDB. Therefore, run the following command:
+Now you need to create the back-end database instance, in our case MariaDB. Therefore, run the following command:
 
 ```
 oc new-app mariadb-persistent -e MYSQL_USER=redhat -e MYSQL_PASSWORD=openshift -e MYSQL_DATABASE=wordpress
@@ -34,7 +34,7 @@ In order to deploy WordPress, build your project on Apache with a PHP image, by 
 oc new-app php~https://github.com/iraftoul/wordpress
 ```
 
-After you successfully deployed WordPress, you need to access it. You expose it as a service using the following command:
+After successfully deploying WordPress, you need to access it. Expose it as a service using the following command:
 
 ```
 oc expose svc/wordpress
@@ -52,11 +52,9 @@ Copy the generated host name from your terminal and paste it in any browser. You
 
 Provide the following information to complete the wordpress initialization:
 
-** Site title, username, password and your email. **
+**Site title, username, password and your email.**
 
-After successfully setting up WordPress, the login screen opens. Use the username and password you provided to log in.
-
-Hopefully everything is now set up and you can start editing on Wordpress.
+After successfully setting up WordPress, the login screen opens. Use the username and password you provided to log in. Hopefully everything is now set up and you can start editing on Wordpress.
 
 For more context and input on the topic feel free to go through this recent post by IBM:
 
