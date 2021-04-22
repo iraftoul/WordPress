@@ -1,10 +1,10 @@
 ## Running Wordpress on Openshift
 
-The following steps walk you through the recommended wordpress installation:
+The following steps walk you through a recommended way for installing wordpress:
 
-### Step 1: Access the OpenShift user interface and log in from the CLI
+### Step 1: Access the OpenShift UI and log in from the CLI
 
-Open the OpenShift console and enter your credentials to login. On the web user interface of OpenShift’s cluster in the top right corner on the service catalog page, click on your credentials and select Copy Login Command. Open your CMD/Terminal and paste the login credentials. You are now successfully logged in to the OpenShift Container Platform server using the oc CLI.
+Open the OpenShift console and enter your credentials to login. On the web user interface of OpenShift’s cluster in the top right corner on the service catalog page, click on your credentials and select Copy Login Command. Open your CMD/Terminal and paste the login credentials. You are now successfully logged in to the OpenShift server CLI.
 
 Note: The generated token is a type of password. Do not share it with others.
 
@@ -26,7 +26,7 @@ oc new-app mariadb-persistent -e MYSQL_USER=redhat -e MYSQL_PASSWORD=openshift -
 
 Note: MariaDB persistent is used so that any data stored is not lost when pods are destroyed.
 
-### Step 4: Deploy the Wordpress application on OpenShift and configure it
+### Step 4: Deploy the Wordpress application on OpenShift
 
 In order to deploy WordPress, build your project on Apache with a PHP image, by using this command:
 
@@ -46,14 +46,18 @@ Next, query the service route for the host URL that is generated. Run the follow
 oc get routes
 ```
 
-Copy the generated host name from your terminal and paste it in any browser. You should see the welcome screen of the deployed WordPress application. Provide the following information:
+Copy the generated host name from your terminal and paste it in any browser. You should see the welcome screen of the deployed WordPress application.
 
-Site title, username, password and your email.
+### Step 5: Configure the Wordpress application
+
+Provide the following information:
+
+** Site title, username, password and your email. **
 
 After successfully setting up WordPress, the login screen opens. Use the username and password you provided to log in.
 
-You can now start editing on Wordpress.
+Hopefully everything is now set up and you can start editing on Wordpress.
 
-For more information feel free to have a look at this post:
+For more context and input on the topic feel free to go through this post by IBM:
 
 https://developer.ibm.com/languages/php/tutorials/build-deploy-wordpress-on-openshift/
