@@ -10,7 +10,7 @@ Note: The generated token is a type of password. Do not share it with others.
 
 ### Step 2: Create a new project
 
-Create a project to host your deployments and resourcesby running the following command:
+Create a project (named intranet) to host your deployments and resources by running the following command:
 
 ```
 oc new-project intranet
@@ -40,7 +40,7 @@ After you successfully deployed WordPress, you need to access it. You expose it 
 oc expose svc/wordpress
 ```
 
-Next, query the service route for the host URL that is generated. Run the following command:
+Next, query the service route for the host URL that is generated. To do so, run this command:
 
 ```
 oc get routes
@@ -50,7 +50,7 @@ Copy the generated host name from your terminal and paste it in any browser. You
 
 ### Step 5: Configure the Wordpress application
 
-Provide the following information:
+Provide the following information to complete the wordpress initialization:
 
 ** Site title, username, password and your email. **
 
@@ -58,6 +58,6 @@ After successfully setting up WordPress, the login screen opens. Use the usernam
 
 Hopefully everything is now set up and you can start editing on Wordpress.
 
-For more context and input on the topic feel free to go through this post by IBM:
+For more context and input on the topic feel free to go through this recent post by IBM:
 
 https://developer.ibm.com/languages/php/tutorials/build-deploy-wordpress-on-openshift/
