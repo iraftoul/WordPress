@@ -50,9 +50,9 @@ Copy the generated host name from your terminal and paste it in any browser. You
 
 ### Step 5: Configure the Wordpress application
 
-Provide the following information to complete the wordpress initialization:
+In the welcome screen, provide the following information to complete the wordpress initialization:
 
-**Site title, username, password and your email.**
+****Site title, username, password and your email.****
 
 After successfully setting up WordPress, the login screen opens. Use the username and password you provided to log in. Hopefully everything is now set up and you can start editing on Wordpress.
 
