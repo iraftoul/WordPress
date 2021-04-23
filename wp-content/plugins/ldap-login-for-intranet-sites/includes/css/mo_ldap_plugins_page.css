@@ -1,0 +1,177 @@
+/*CSS For reponsive UI*/
+@media (min-width:1750px){
+            #buddypress
+            {
+            margin-left:-38em !important;
+            }
+        }
+        /*90*/
+        @media (min-width:1600px) and (max-width:1750px) {
+            #buddypress
+            {
+            margin-left:-34em !important;
+            }
+        }
+        /*100*/
+        @media (min-width:1400px) and (max-width:1600px){
+            #buddypress
+            {
+            margin-left:-31em !important;
+            }
+        }
+        /*110*/
+        @media (min-width:1300px) and (max-width:1400px){
+            #buddypress
+            {
+            margin-left:-27em !important;
+            }
+        }
+        /*125*/
+        @media (min-width:1100px) and (max-width:1300px){
+            #buddypress
+            {
+            margin-left:-25em !important;
+            }
+        }
+        /*150*/
+        @media (min-width:900px) and (max-width:1100px){
+            #buddypress
+            {
+            margin-left:-17% !important;
+            }
+        }
+        /*175*/
+        @media (min-width:800px) and (max-width:900px){
+            #buddypress
+            {
+            margin-left:13% !important;
+            }
+        }
+        /*200*/
+        @media (min-width:700px) and (max-width:800px){
+            #buddypress
+            {
+            margin-left:13% !important;
+            }
+        }
+
+.mo_ldap_modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 100px;
+    top: 0;
+    margin-left:220px;
+    width: 50%;
+    height: 100%;
+
+}
+
+.mo_ldap_modal_feedback {
+    display: none;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin-left:100px;
+    z-index: 1050;
+    -webkit-overflow-scrolling: touch;
+    outline: 0;
+
+}
+
+
+.mo_ldap_modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 55%;
+    z-index: 1000000;
+    position: fixed;
+}
+
+.mo_ldap_modal_content_configuration_support {
+    background-color: #fefefe;
+    margin: 47px 0px 0px 160px;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 34%;
+    z-index: 1000000;
+    position: fixed;
+}
+
+.mo_ldap_modal_content_feedback {
+    position: relative;
+    background-color: #ffffff;
+    border: 1px solid #999999;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+    -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    outline: 0;
+    margin-left: 20%;
+    margin-right: 24%;
+    margin-top:6%;
+
+}
+
+.close_local_feedback_form{
+    float: right;
+    background-color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.mo_ldap_close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.mo_ldap_close:hover,
+.mo_ldap_close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+.alert{
+    padding:5px;
+    margin-bottom:10px;
+    border:1px solid transparent;
+    border-radius:4px
+}
+.alert-info{
+    color:#31708f;
+    background-color:#d9edf7;
+    border-color:#bce8f1
+}
+
+.trouble_button{
+    font-weight: 654;
+    font-family: inherit;
+    font-style: unset;
+
+}
+
+.php-error #adminmenuback , .php-error #adminmenuwrap{
+    margin-top: unset;
+}
+
+span.link-text{
+    padding: 3px;
+}
+.moldap-modal-contatiner-feedback{
+    top: 0;
+    left: 0;
+    position: fixed;
+    width: 100%!important;
+    background-color: #121212cc!important;
+    opacity: .9!important;
+    height: 100%!important;
+}

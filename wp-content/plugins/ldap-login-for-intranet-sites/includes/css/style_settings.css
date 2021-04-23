@@ -1,0 +1,389 @@
+.mo_ldap_help_title {
+	font-size:17px;
+	width:100%;
+	color:#1B79AE;
+	cursor:pointer;
+	font-weight: bold;
+}
+.mo_ldap_help_desc {
+	font-size:13px;
+	border-left:solid 2px rgba(128, 128, 128, 0.65);
+	margin-top:10px;
+	padding-left:10px;
+}
+.mo_ldap_help {
+	width: 95%;
+}
+.mo_ldap_help_cell {
+	padding: 20px;
+	border-bottom: solid 1px grey;
+}
+.mo_ldap_support_layout{
+       width: 93%;
+       background-color:#FFFFFF; 
+       border:1px solid #CCCCCC; 
+       padding-left:20px; 
+}
+
+.mo_ldap_support_layout li{
+	border-bottom: 2px solid #ccc;
+}
+
+.mo_ldap_support_layout li a{
+	text-decoration: none;
+	color: #000;
+	display: inline-flex;
+}
+
+.mo_ldap_feature_layout{
+	width: 100%;
+	background-color:#FFFFFF;
+	border:1px solid #CCCCCC;
+	padding-left:20px;
+}
+
+.mo_ldap_feature_table{
+	width: 100%;
+}
+
+
+.mo_ldap_feature_unavail{
+	color: #000;
+	text-decoration: none;
+}
+.mo_ldap_feature_avail:hover{
+	font-weight: bold;
+	color: green;
+}
+
+.mo_ldap_feature_unavail:hover{
+	font-weight: bold;
+	cursor: not-allowed;
+	color:grey;
+}
+
+.mo_ldap_table_layout {
+	background-color:#FFFFFF; 
+	border:1px solid #CCCCCC; 
+	padding:0px 10px 10px 10px;
+	margin-bottom: 10px;
+}
+
+
+.mo_ldap_table_layout {
+	background-color:#FFFFFF; 
+	border:1px solid #CCCCCC; 
+	padding:0px 24px 10px 20px;
+	min-height:360px;
+}
+.mo_ldap_small_layout{
+	position: relative;
+	background-color:#FFFFFF; 
+	border:1px solid #CCCCCC; 
+	padding:20px 24px 10px 20px;
+	margin-top: 20px;
+}
+.mo_ldap_container{
+	padding:10px;
+}
+.mo_ldap_support_layout{
+	width: 93%;
+	background-color:#FFFFFF; 
+	border:1px solid #CCCCCC; 
+	padding-left:3%;
+	padding-right:3%;
+}
+
+.mo_ldap_table_layout td strong {
+	margin-left: 10px;
+}
+.col1 {
+	width: 20%;
+}
+.mo_ldap_left {
+	overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    white-space: nowrap !important;
+    display: inline-block !important;
+}
+.mo_ldap_right {
+	float: right !important;
+}
+#panel1{
+	width: 100%;
+}
+
+.mo_ldap_table_textbox {
+	width:100%;
+	border-radius:4px;
+	height:30px;
+}
+.mo_ldap_settings_table {
+	position: relative;
+	width: 100%;
+}
+
+#mo_ldap_note{
+	background-color: #d9edf7;
+	border-radius: 4px;
+	padding: 5px;
+	color: #31708f;
+}
+.button-green{
+	background: #95D387 !important;
+	color: #ffffff !important;
+	border: 1px solid #95D387 !important;
+}
+
+.mo_ldap_input_success{
+	background: url(../images/success.png) no-repeat scroll 7px 7px;
+	padding-left: 35px;
+	text-indent: 25px;
+    background-size: 25px 25px;
+    background-position: 5px 2px;  
+}
+
+.mo_ldap_input_error{
+	background: url(../images/error.png) no-repeat scroll 7px 7px;
+	padding-left: 33px;
+	text-indent: 25px;
+    background-size: 20px 20px;
+    background-position: 6px 5px;  
+}
+
+.mo_ldap_local_pricing_table{
+	text-align:center;
+	font-size: 15px !important;
+	background-color:#FFFFFF; 
+}
+
+.mo_ldap_local_pricing_header{
+	color: #fff !important;
+	margin: 4px !important;
+}
+
+.mo_ldap_local_pricing_sub_header{
+	margin: 2px !important;
+	color: #fff !important;
+	
+}
+
+.mo_ldap_local_pricing_text{
+	font-size: 15px !important;
+	color: #fff !important;
+	font-weight: bold !important;
+}
+
+.mo_ldap_local_pricing_free_tab{
+	background-color: rgba(34, 153, 221, 0.82)!important;
+}
+
+.mo_ldap_local_pricing_paid_tab{
+	background-color: #1a71a4 !important;
+
+	
+}
+
+.mo_ldap_local_thumbnail{
+	width: 250px;
+    padding: 4px;
+    margin-bottom: 10px;
+    line-height: 1.42857143;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    -webkit-transition: border .2s ease-in-out;
+    -o-transition: border .2s ease-in-out;
+    transition: border .2s ease-in-out;
+}
+
+h2 .nav-tab{
+	font-size:13px;
+}
+
+.mo_table-bordered, .mo_table-bordered>tbody>tr>td{
+	border: 1px solid #ddd;
+}
+
+.mo_table-bordered>thead>tr>th{
+	vertical-align:top !important;
+}
+
+.mo_table-striped>tbody>tr:nth-of-type(odd) {
+	background-color: #f9f9f9;
+}
+
+.mo_align-center>tr>td{
+	text-align:center !important;
+}
+
+.mo-fa-icon>tr>td>i.fa{
+	color:#5b8a0f;
+
+}
+
+.mo_plan-desc{
+	font-size:14px !important;
+}
+
+.activeddon{
+	background-color: #e97d68;
+	color: #FFFFFF;
+	transform: scale(1.05);
+	-moz-box-shadow:    0 0 6px 3px grey;
+	-webkit-box-shadow: 0 0 6px 3px grey;
+	box-shadow:         0 0 6px 3px grey;
+}
+
+
+
+.tourbutton {
+	background-color: #4CAF50;
+	color: white;
+	padding: 14px 20px;
+	margin: 8px 0;
+	border: none;
+	cursor: pointer;
+	width: 100%;
+	opacity: 0.9;
+}
+
+.tourbutton:hover {
+	opacity: 1;
+}
+
+/* Float cancel and delete buttons and add an equal width */
+.plugintour, .skiptour {
+	float: left;
+	width: 50%;
+}
+
+/* Add a color to the cancel button */
+.skiptour {
+	background-color: #ccc;
+	color: black;
+}
+
+/* Add a color to the delete button */
+.plugintour {
+	background-color: #f44336;
+}
+
+/* Add padding and center-align text to the container */
+.container {
+	padding: 16px;
+	text-align: center;
+}
+
+/* The Modal (background) */
+.modal {
+	position: fixed; /* Stay in place */
+	z-index: 1; /* Sit on top */
+	padding-top: 100px; /* Location of the box */
+	left: 0;
+	top: 0;
+	width: 100%; /* Full width */
+	height: 100%; /* Full height */
+	overflow: auto; /* Enable scroll if needed */
+	background-color: rgb(0, 0, 0); /* Fallback color */
+	background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+	background-color: #fefefe;
+	margin: auto;
+	padding: 20px;
+	border: 1px solid #888;
+	width: 45%;
+	margin-top: 150px;
+}
+
+
+/* Style the horizontal ruler */
+hr {
+	border: 1px solid #f1f1f1;
+	margin-bottom: 25px;
+}
+
+/* Clear floats */
+.clearfix::after {
+	content: "";
+	clear: both;
+	display: table;
+}
+
+/* Change styles for cancel button and delete button on extra small screens */
+@media screen and (max-width: 300px) {
+	.plugintour, .skiptour {
+		width: 100%;
+	}
+}
+
+.mo_video_icon::before
+{
+	width: 27px;
+	height: 27px;
+	border-radius: 50%;
+	font-size: 17px;
+	color: red;
+	line-height: 28px;
+	text-align: center;
+	background: white;
+	margin-top: -3%;
+	margin-left: -2%;
+	border: 1.5px solid #b7b1b1;
+}
+.mo_book_icon::before
+{
+	width: 27px;
+	height: 27px;
+	border-radius: 50%;
+	font-size: 17px;
+	color: white;
+	line-height: 28px;
+	text-align: center;
+	background: black;
+	margin-top: -3%;
+	margin-left: -2%;
+	border: 1.5px solid #b7b1b1;
+}
+
+a.mo-form-links {
+	background-color: #e5e5e5;
+	color: black;
+	text-align: left;
+	border-radius: 5px;
+	margin-left: 2%;
+	font-size: 0.9em;
+	display:inline-flex;
+	width:165px;
+	font-weight:bold;
+}
+
+a.mo-form-links:hover {
+	background-color: white;
+}
+
+.moldap-modal-contatiner-contact-us{
+	top: 0;
+	left: 0;
+	position: fixed;
+	width: 100%!important;
+	background-color: #121212cc!important;
+	opacity: .9!important;
+	height: 100%!important;
+	z-index: 10;
+}
+
+a.mo-video-links {
+	background-color: #e5e5e5;
+	color: black;
+	text-align: left;
+	border-radius: 5px;
+	margin-left: 2%;
+	font-size: 0.9em;
+	display:inline-flex;
+	width:165px;
+	font-weight:bold;
+}
