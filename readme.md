@@ -46,7 +46,7 @@ Next, query the service route for the host URL that is generated. To do so, run 
 oc get routes
 ```
 
-Copy the generated host name from your terminal and paste it in any browser. You should see the welcome screen of the deployed WordPress application.
+Copy the generated host name and paste it in any browser. You should see the welcome screen of WordPress.
 
 ### Step 5: Configure the Wordpress application
 
@@ -57,5 +57,4 @@ In the welcome screen, provide the following information to complete the wordpre
 After setting up WordPress, the login screen opens. Use the username and password you provided to log in. Everything should be now set up and you can start editing on Wordpress.
 
 For more context and input on the topic feel free to go through this recent post by IBM:
-
 https://developer.ibm.com/languages/php/tutorials/build-deploy-wordpress-on-openshift/
