@@ -52,7 +52,7 @@ Copy the generated host name and paste it in any browser. You should see the wel
 
 In the welcome screen, provide the following information to complete the wordpress initialization:
 
-**_Site title, username, password and your email._**
+_Site title, username, password and your email._
 
 After setting up WordPress, the login screen opens. Use the username and password you provided to log in. Everything should be now set up and you can start editing on Wordpress.
 
